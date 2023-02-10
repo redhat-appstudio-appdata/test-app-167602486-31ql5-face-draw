@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: java-quarkus
+  namespace: abhindas-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio/user-workload@sha256:47c1395308879efcc8e34aa7b067e0e9c54f5ef259bf1afd58361d59f934396f
+        name: container-image
+        resources: {}
+status: {}
