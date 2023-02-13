@@ -23,7 +23,7 @@ spec:
         app.kubernetes.io/instance: java-quarkus
     spec:
       containers:
-      - image: quay.io/redhat-appstudio/user-workload:abhindas-tenant-java-quarkus
+      - image: quay.io/redhat-appstudio/user-workload@sha256:47c1395308879efcc8e34aa7b067e0e9c54f5ef259bf1afd58361d59f934396f
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
@@ -40,6 +40,9 @@ spec:
           tcpSocket:
             port: 8081
         resources:
+          limits:
+            cpu: "1"
+            memory: 512Mi
           requests:
             cpu: 10m
             memory: 100Mi
