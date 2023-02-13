@@ -23,7 +23,7 @@ spec:
         app.kubernetes.io/instance: go
     spec:
       containers:
-      - image: quay.io/redhat-appstudio/user-workload:abhindas-tenant-go
+      - image: quay.io/redhat-appstudio/user-workload@sha256:64e0eba205d62f87de0a577ff30dfa9c06ec90fb801e7bdf2a41b94025e46127
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
@@ -40,6 +40,9 @@ spec:
           tcpSocket:
             port: 8081
         resources:
+          limits:
+            cpu: "1"
+            memory: 512Mi
           requests:
             cpu: 10m
             memory: 10Mi
