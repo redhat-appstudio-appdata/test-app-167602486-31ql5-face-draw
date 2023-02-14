@@ -13,7 +13,7 @@ spec:
       creationTimestamp: null
     spec:
       containers:
-      - image: quay.io/redhat-appstudio/user-workload@sha256:4c8e59a4a1ce2e9383bc5847ee7ba9e660213ce992aa17f117ebe3f3e6e7316a
+      - image: quay.io/redhat-appstudio/user-workload:abhindas-tenant-go-component
         name: container-image
         resources: {}
 status: {}
